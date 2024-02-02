@@ -3,14 +3,12 @@
 /**
  * open_and_read_file - This opens a file and also read the content of the file
  * @file_path: the name of the file
- * Return: void
 */
 void stream_file(char *file_path)
 {
 	int fd;
 
-	if (file_path == NULL)
-		return;
+	if (file_path == NULL);
 
 	fd = open(file_path, O_RDONLY);
 
