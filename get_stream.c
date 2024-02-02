@@ -1,0 +1,27 @@
+#include "monty.h"
+
+/**
+ * open_and_read_file - This opens a file and also read the content of the file
+ * @file_path: the name of the file
+ * Return: void
+*/
+void stream_file(char *file_path)
+{
+	int fd;
+
+	if (file_path == NULL)
+		return;
+
+	fd = open(file_path, O_RDONLY);
+
+	if (fd == -1)
+		file_error();
+
+	arguments->stream = fopen(file_path, "r");
+
+	if (arguments->stream == NULL)
+	{	
+		fclose(arguments->stream);
+		file_error();
+	}
+}
