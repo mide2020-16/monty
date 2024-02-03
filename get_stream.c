@@ -8,7 +8,7 @@ void stream_file(char *file_path)
 {
 	int fd;
 
-	if (file_path == NULL);
+	if (file_path == NULL)
 	{
 		;
 	}

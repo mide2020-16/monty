@@ -100,7 +100,7 @@ void initialize_arguments(void);
  * Error messages to the stderr
 */
 void malloc_error();
-void check_terminal_args(int argc, char *message);
+void check_terminal_args(int argc);
 void file_error(void);
 
 /**

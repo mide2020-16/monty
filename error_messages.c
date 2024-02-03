@@ -6,11 +6,11 @@
  * @message: Message to pass across
  * Return: void
  */
-void check_terminal_args(int argc, char *message)
+void check_terminal_args(int argc)
 {
 	if (argc != 2)
 	{
-		fprintf(stderr, message);
+		fprintf(stderr, "USAGE: monty file\n");
 		exit(EXIT_FAILURE);
 	}
 	return;

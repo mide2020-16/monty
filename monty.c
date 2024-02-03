@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
 	ssize_t len = 0;
 
 	arguments->file_name = argv[1];
-	check_terminal_args(argc, "USAGE: monty file\n");
+	check_terminal_args(argc);
 
 	initialize_arguments();
 	stream_file(arguments->file_name);
