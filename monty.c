@@ -1,15 +1,6 @@
 #include "monty.h"
 
-/**
- * _functions_used - Functions used in main()
- */
-void _functions_used(void)
-{
-	tokenize_line();
-	get_instruction();
-	run_instruction();
-	free_tokens();
-}
+arg_t *arguments = NULL;
 
 /**
  * main - Entry point to monty
@@ -41,8 +32,10 @@ int main(int argc, char *argv[])
 			malloc_error();
 
 		strcpy(arguments->line, line);
-
-		_functions_used();
+		tokenize_line();
+		get_instruction();
+		run_instruction();
+		free_tokens();
 		free(arguments->line);
 	}
 	close_stream();
