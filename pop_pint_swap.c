@@ -12,7 +12,7 @@ void pint(stack_t **stack, unsigned int line_number)
 
 	if (arguments->head == NULL)
 	{
-		vprintf(stderr, "L%d: can't pint, stack empty\n", line_number);
+		fprintf(stderr, "L%d: can't pint, stack empty\n", line_number);
 		free_all_args();
 		exit(EXIT_FAILURE);
 	}
@@ -32,7 +32,7 @@ void pop(stack_t **stack, unsigned int line_number)
 
 	if (arguments->head == NULL)
 	{
-		vprintf(stderr, "L%d: can't pop a empty stack\n", line_number);
+		fprintf(stderr, "L%d: can't pop a empty stack\n", line_number);
 		free_all_args();
 		exit(EXIT_FAILURE);
 	}
@@ -54,7 +54,7 @@ void swap(stack_t **stack, unsigned int line_number)
 	(void)stack;
 	if (arguments->stack_length < 2)
 	{
-		vprintf(stderr, "L%d: can't swap, stack too short\n", line_number);
+		fprintf(stderr, "L%d: can't swap, stack too short\n", line_number);
 		free_all_args();
 		exit(EXIT_FAILURE);
 	}

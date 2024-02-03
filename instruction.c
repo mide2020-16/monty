@@ -6,7 +6,7 @@
 void invalid_instruction(void)
 {
 	char *opcode = arguments->instruction->opcode;
-	vprintf(2, "L%d: unknown instruction <opcode>", arguments->ln, opcode);
+	fprintf(stderr, "L%d: unknown instruction <opcode>", arguments->ln, opcode);
 	free_all_args();
 	exit(EXIT_FAILURE);
 }
@@ -20,8 +20,7 @@ void get_instruction(void)
 	int i = 0;
 
 	instruction_t *instructions[] = {
-	    {"push", &push}, {"pop", &pop}, {"pint", &pint}, {"swap", &swap}, {"nop", &nop}, {"pall", &pall}, {"add", &add}, {"sub", &sub}, {"div", &_div}, {"mul", &mul}, {"rotl", &rotl}, {"rotr", &rotr}, {"stack", &stack}, {"queue", &queue}, {"pstr", &pstr}, {"pchar", &pchar}, {"mod", &mod}, {NULL, NULL}
-	};
+	    {"push", &push}, {"pop", &pop}, {"pint", &pint}, {"swap", &swap}, {"nop", &nop}, {"pall", &pall}, {"add", &add}, {"sub", &sub}, {"div", &_div}, {"mul", &mul}, {"rotl", &rotl}, {"rotr", &rotr}, {"stack", &stack}, {"queue", &queue}, {"pstr", &pstr}, {"pchar", &pchar}, {"mod", &mod}, {NULL, NULL}};
 
 	if (arguments->n_tokens == 0)
 		return;
@@ -32,7 +31,7 @@ void get_instruction(void)
 		arguments->instruction->f = nop;
 	}
 
-	if (arguments->n_tokens > 2 && (arguments->tokens[2][0] = '#' || arguments->tokens[2][0]))
+	if (arguments->n_tokens > 2 && (arguments->tokens[2][0] == '#' || arguments->tokens[2][0]))
 	{
 		/**do somrthing*/
 	}
@@ -45,9 +44,8 @@ void get_instruction(void)
 			arguments->instruction->f = *instructions[i]->f;
 			return;
 		}
-
-		invalid_instruction();
 	}
+	invalid_instruction();
 }
 
 /**

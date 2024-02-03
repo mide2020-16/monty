@@ -10,7 +10,7 @@ void check_terminal_args(int argc, char *message)
 {
 	if (argc != 2)
 	{
-		vprintf(STDERR_FILENO, message);
+		fprintf(stderr, message);
 		exit(EXIT_FAILURE);
 	}
 	return;
@@ -21,7 +21,7 @@ void check_terminal_args(int argc, char *message)
  */
 void malloc_error(void)
 {
-	vprintf(STDERR_FILENO, "Error : malloc failed\n");
+	fprintf(stderr, "Error : malloc failed\n");
 	free_arguments();
 	exit(EXIT_FAILURE);
 }
@@ -31,7 +31,7 @@ void malloc_error(void)
  */
 void file_error(void)
 {
-	vprintf(STDERR_FILENO, "Error: Can't open file %s\n", arguments->file_name);
+	fprintf(stderr, "Error: Can't open file %s\n", arguments->file_name);
 	free_arguments();
 	exit(EXIT_FAILURE);
 }

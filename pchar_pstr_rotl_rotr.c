@@ -13,7 +13,7 @@ void pchar(stack_t **stack, unsigned int line_number)
 	(void)stack;
 	if (arguments->head == NULL)
 	{
-		vprintf(stderr, "L%d: can't pchar, stack empty\n", line_number);
+		fprintf(stderr, "L%d: can't pchar, stack empty\n", line_number);
 		free_all_args();
 		exit(EXIT_FAILURE);
 	}
@@ -21,7 +21,7 @@ void pchar(stack_t **stack, unsigned int line_number)
 	node = arguments->head;
 	if (node->n < 0 || node->n > 127)
 	{
-		vprintf(stderr, "L%d: can't pchar, value out of range\n", line_number);
+		fprintf(stderr, "L%d: can't pchar, value out of range\n", line_number);
 		free_all_args();
 		exit(EXIT_FAILURE);
 	}
