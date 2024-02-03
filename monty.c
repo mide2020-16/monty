@@ -1,5 +1,15 @@
 #include "monty.h"
-#include <stdio.h>
+
+/**
+ * _functions_used - Functions used in main()
+ */
+void _functions_used(void)
+{
+	tokenize_line();
+	get_instruction();
+	run_instruction();
+	free_tokens();
+}
 
 /**
  * main - Entry point to monty
@@ -7,9 +17,10 @@
  * @argv: the vector arguments
  *
  * Return: 0 on Success, 1 on Failure
-*/
+ */
 int main(int argc, char *argv[])
 {
+	char line[MAX_LINE_LENGTH];
 	ssize_t len = 0;
 
 	arguments->file_name = argv[1];
@@ -18,15 +29,21 @@ int main(int argc, char *argv[])
 	initialize_arguments();
 	stream_file(arguments->file_name);
 
-	while (getline(&arguments->line, &len, arguments->stream) != -1)
+	while (fgets(line, MAX_LINE_LENGTH, arguments->stream) != NULL)
 	{
+		len = strlen(line);
+		if (len > 0 && line[len - 1] == '\n')
+			line[len - 1] = '\0';
+
 		arguments->ln += 1;
-		tokenize_line();
+		arguments->line = malloc(len + 1);
+		if (arguments->line == NULL)
+			malloc_error();
 
-		get_instruction();
-		run_instruction();
+		strcpy(arguments->line, line);
 
-		free_tokens();
+		_functions_used();
+		free(arguments->line);
 	}
 	close_stream();
 

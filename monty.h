@@ -13,6 +13,7 @@
 #include <fcntl.h>
 #include <string.h>
 
+#define MAX_LINE_LENGTH 1024 * 8
 
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
@@ -74,7 +75,6 @@ typedef struct arg_s
 	char *file_name;
 	char *line;
 	char **tokens;
-
 	int n_tokens;
 	unsigned int ln;
 	int stack;
