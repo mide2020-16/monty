@@ -36,12 +36,12 @@ void get_instruction(void)
 		/**do somrthing*/
 	}
 
-	for (; instructions[i]->opcode != NULL; i++)
+	for (; instructions[i].opcode != NULL; i++)
 	{
-		if (strcmp(instructions[i]->opcode, arguments->tokens[0]) == 0)
+		if (strcmp(instructions[i].opcode, arguments->tokens[0]) == 0)
 		{
-			arguments->instruction->opcode = instructions[i]->opcode;
-			arguments->instruction->f = *instructions[i]->f;
+			arguments->instruction->opcode = instructions[i].opcode;
+			arguments->instruction->f = *instructions[i].f;
 			return;
 		}
 	}
