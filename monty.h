@@ -107,7 +107,7 @@ void file_error(void);
  * get_stream.c
  * Stream file and read line by line
 */
-void stream_file(char file_path);
+void stream_file(char *file_path);
 
 /**
  * tokenize.c
@@ -122,13 +122,13 @@ void tokenize_line(void);
  * appropriate function to it and runs it accordingly
 */
 void get_instruction(void);
+void run_instruction(void);
 
 /**
  * is_number.c
  * Checks if the value in the line is a number
-*/
+ */
 int is_number(char *str);
-
 
 /**
  * free_arguments.c

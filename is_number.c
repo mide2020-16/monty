@@ -11,7 +11,7 @@ int is_number(char *str)
 
         while (str[i])
         {
-                while (i == 0 && str[i] = '-' && str[i + 1])
+                while (i == 0 && str[i] == '-' && str[i + 1])
                 {
                         i++;
                         continue;

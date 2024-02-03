@@ -13,7 +13,7 @@ void add(stack_t **stack, unsigned int line_number)
 	(void)stack;
 	if (arguments->stack_length < 2)
 	{
-		dprintf(stderr, "L%d: can't add, stack too short\n", line_number);
+		vprintf(stderr, "L%d: can't add, stack too short\n", line_number);
 		free_all_args();
 		exit(EXIT_FAILURE);
 	}
@@ -41,7 +41,7 @@ void sub(stack_t **stack, unsigned int line_number)
 
 	if (arguments->stack_length < 2)
 	{
-		dprintf(stderr, "L%d: can't sub, stack too short\n", line_number);
+		vprintf(stderr, "L%d: can't sub, stack too short\n", line_number);
 		free_all_args();
 		exit(EXIT_FAILURE);
 	}
@@ -49,7 +49,7 @@ void sub(stack_t **stack, unsigned int line_number)
 	node1 = arguments->head;
 	node2 = arguments->head->next;
 
-	node2->n = node1->n - node1->n;
+	node2->n = node2->n - node1->n;
 
 	delete_node();
 	arguments->stack_length -= 1;
@@ -69,7 +69,7 @@ void mul(stack_t **stack, unsigned int line_number)
 
 	if (arguments->stack_length < 2)
 	{
-		dprintf(stderr, "L%d: can't mod, stack too short\n", line_number);
+		vprintf(stderr, "L%d: can't mul, stack too short\n", line_number);
 		free_all_args();
 		exit(EXIT_FAILURE);
 	}
@@ -77,7 +77,7 @@ void mul(stack_t **stack, unsigned int line_number)
 	node1 = arguments->head;
 	node2 = arguments->head->next;
 
-	node2->n = node1->n * node1->n;
+	node2->n = node2->n * node1->n;
 
 	delete_node();
 	arguments->stack_length -= 1;
@@ -96,7 +96,7 @@ void _div(stack_t **stack, unsigned int line_number)
 	(void)stack;
 	if (arguments->stack_length < 2)
 	{
-		dprintf(stderr, "L%d: can't div, stack too short\n", line_number);
+		vprintf(stderr, "L%d: can't div, stack too short\n", line_number);
 		free_all_args();
 		exit(EXIT_FAILURE);
 	}
@@ -106,7 +106,7 @@ void _div(stack_t **stack, unsigned int line_number)
 
 	if (node1->n == 0)
 	{
-		dprintf(stderr, "L%d: division by zero\n", line_number);
+		vprintf(stderr, "L%d: division by zero\n", line_number);
 		free_all_args();
 		exit(EXIT_FAILURE);
 	}
@@ -131,7 +131,7 @@ void mod(stack_t **stack, unsigned int line_number)
 
 	if (arguments->stack_length < 2)
 	{
-		dprintf(stderr, "L%d: can't mod, stack too short\n", line_number);
+		vprintf(stderr, "L%d: can't mod, stack too short\n", line_number);
 		free_all_args();
 		exit(EXIT_FAILURE);
 	}
@@ -141,7 +141,7 @@ void mod(stack_t **stack, unsigned int line_number)
 
 	if (node1->n == 0)
 	{
-		dprintf(stderr, "L%d: division by zero\n", line_number);
+		vprintf(stderr, "L%d: division by zero\n", line_number);
 		free_all_args();
 		exit(EXIT_FAILURE);
 	}

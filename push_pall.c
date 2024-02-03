@@ -13,7 +13,7 @@ void push(stack_t **stack, unsigned int line_number)
 	if (arguments->n_tokens <= 1 || !(is_number(arguments->tokens[1])))
 	{
 		free_arguments();
-		dprintf(2, "L%d: push integer\n", line_number);
+		vprintf(2, "L%d: push integer\n", line_number);
 		exit(EXIT_FAILURE);
 	}
 
