@@ -6,6 +6,7 @@
 void invalid_instruction(void)
 {
 	char *opcode = arguments->instruction->opcode;
+
 	fprintf(stderr, "L%d: unknown instruction %s\n", arguments->ln, opcode);
 	free_all_args();
 	exit(EXIT_FAILURE);
@@ -20,7 +21,16 @@ void get_instruction(void)
 	int i = 0;
 
 	instruction_t instructions[] = {
-		{"push", &push}, {"pop", &pop}, {"pint", &pint}, {"swap", &swap}, {"nop", &nop}, {"pall", &pall}, {"add", &add}, {"sub", &sub}, {"div", &_div}, {"mul", &mul}, {"rotl", &rotl}, {"rotr", &rotr}, {"stack", &stack}, {"queue", &queue}, {"pstr", &pstr}, {"pchar", &pchar}, {"mod", &mod}, {NULL, NULL}};
+		{"push", &push}, {"pop", &pop},
+		{"pint", &pint}, {"swap", &swap},
+		{"nop", &nop}, {"pall", &pall},
+		{"add", &add}, {"sub", &sub},
+		{"div", &_div}, {"mul", &mul},
+		{"rotl", &rotl}, {"rotr", &rotr},
+		{"stack", &stack}, {"queue", &queue},
+		{"pstr", &pstr}, {"pchar", &pchar},
+		{"mod", &mod}, {NULL, NULL}
+	};
 
 	if (arguments->n_tokens == 0)
 		return;

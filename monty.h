@@ -89,6 +89,7 @@ typedef struct arg_s
 */
 extern arg_t *arguments;
 
+
 /**
  * initialize_arguments.c
  * Initializes all the prop of arg_t

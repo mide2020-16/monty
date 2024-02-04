@@ -3,7 +3,7 @@
 /**
  * pchar - This operation prints a single character
  *
- * @stack: The instance of the stack
+ * @stack:       The instance of the stack
  * @line_number: The line of the operation in the file
  */
 void pchar(stack_t **stack, unsigned int line_number)
@@ -32,7 +32,7 @@ void pchar(stack_t **stack, unsigned int line_number)
 /**
  * pstr - This operation prints a string
  *
- * @stack: The instance of the stack
+ * @stack:       The instance of the stack
  * @line_number: The line of the operation in the file
  */
 void pstr(stack_t **stack, unsigned int line_number)
@@ -55,17 +55,12 @@ void pstr(stack_t **stack, unsigned int line_number)
 	printf("\n");
 }
 
+
 /**
- * rotr - This operation rotates the nodes from bottom to top
+ * rotl - This operation rotates the nodes from bottom to top
  *
- * @stack: The instance of the stack
+ * @stack:       The instance of the stack
  * @line_number: The line of the operation in the file
- */
-/**
- * rotl - a Function that ...
- * @stack: Description of stack.
- * @line_number: Description of line_number.
- * Return: Description of the return value.
  */
 void rotl(stack_t **stack, unsigned int line_number)
 {
@@ -99,7 +94,7 @@ void rotl(stack_t **stack, unsigned int line_number)
 /**
  * rotr - This operation rotates the nodes from top to bottom
  *
- * @stack: The instance of the stack
+ * @stack:       The instance of the stack
  * @line_number: The line of the operation in the file
  */
 void rotr(stack_t **stack, unsigned int line_number)

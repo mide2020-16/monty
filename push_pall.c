@@ -24,9 +24,6 @@ void push(stack_t **stack, unsigned int line_number)
 	(*stack)->next = (*stack)->prev = NULL;
 	(*stack)->n = (int)atoi(arguments->tokens[1]);
 
-	/*
-	Add a list to the beginning of the stack or at the end
-	*/
 	if (arguments->head == NULL)
 		arguments->head = *stack;
 	else
@@ -43,12 +40,10 @@ void push(stack_t **stack, unsigned int line_number)
 
 			while (temp->next)
 				temp = temp->next;
-
 			temp->next = *stack;
 			(*stack)->prev = temp;
 		}
 	}
-
 	arguments->stack_length += 1;
 }
 
