@@ -27,13 +27,14 @@ void push(stack_t **stack, unsigned int line_number)
 	/*
 	Add a list to the beginning of the stack or at the end
 	*/
-	if (arguments->head != NULL)
+	if (arguments->head == NULL)
+		arguments->head = *stack;
+	else
 	{
 		if (arguments->stack)
 		{
 			(*stack)->next = arguments->head;
 			arguments->head->prev = *stack;
-
 			arguments->head = *stack;
 		}
 		else
@@ -41,16 +42,12 @@ void push(stack_t **stack, unsigned int line_number)
 			temp = arguments->head;
 
 			while (temp->next)
-			{
 				temp = temp->next;
-				temp->next = *stack;
 
-				(*stack)->prev = temp;
-			}
+			temp->next = *stack;
+			(*stack)->prev = temp;
 		}
 	}
-	else
-		arguments->head = *stack;
 
 	arguments->stack_length += 1;
 }

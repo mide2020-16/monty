@@ -31,20 +31,20 @@ void get_instruction(void)
 		arguments->instruction->f = nop;
 	}
 
-	if (arguments->n_tokens > 2 && (arguments->tokens[2][0] == '#' || arguments->tokens[2][0]))
+	if (arguments->instruction != NULL && arguments->instruction->opcode != NULL)
 	{
-		/**do somrthing*/
-	}
+		while (instructions[i].opcode != NULL){
+			if (strcmp(instructions[i].opcode, arguments->tokens[0]) == 0)
+			{
+				arguments->instruction->opcode = instructions[i].opcode;
 
-	for (; instructions[i].opcode != NULL; i++)
-	{
-		if (strcmp(instructions[i].opcode, arguments->tokens[0]) == 0)
-		{
-			arguments->instruction->opcode = instructions[i].opcode;
-			arguments->instruction->f = *instructions[i].f;
-			return;
+				arguments->instruction->f = *instructions[i].f;
+				return;
+			}
+			i++;
 		}
 	}
+	
 	invalid_instruction();
 }
 
