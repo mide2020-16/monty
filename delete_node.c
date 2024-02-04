@@ -12,3 +12,4 @@ void delete_node(void)
 	arguments->head = temp->next;
 	free(temp);
 }
+

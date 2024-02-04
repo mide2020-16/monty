@@ -3,7 +3,7 @@
 /**
  * pint - Prints the value of the first node
  *
- * @stack:       The stack
+ * @stack: The stack
  * @line_number: The line number of the instruction
  */
 void pint(stack_t **stack, unsigned int line_number)
@@ -23,7 +23,7 @@ void pint(stack_t **stack, unsigned int line_number)
 /**
  * pop - Removes the first node and it's value
  *
- * @stack:       The stack
+ * @stack: The stack
  * @line_number: The line number of the instruction
  */
 void pop(stack_t **stack, unsigned int line_number)
@@ -44,7 +44,7 @@ void pop(stack_t **stack, unsigned int line_number)
 /**
  * swap - Swaps the position two nodes
  *
- * @stack:       The stack
+ * @stack: The stack
  * @line_number: The line number of the instruction
  */
 void swap(stack_t **stack, unsigned int line_number)
@@ -72,3 +72,4 @@ void swap(stack_t **stack, unsigned int line_number)
 	node2->prev = NULL;
 	arguments->head = node2;
 }
+

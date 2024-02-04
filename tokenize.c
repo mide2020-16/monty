@@ -4,7 +4,7 @@
  * tokenize_line - This tokenize the current line
  * form the file and get the number of words in
  * the line and also pass each word to it's own array
-*/
+ */
 void tokenize_line(void)
 {
 	int i = 0;
@@ -39,3 +39,4 @@ void tokenize_line(void)
 	arguments->tokens[i] = NULL;
 	free(copy_line);
 }
+

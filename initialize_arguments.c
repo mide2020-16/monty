@@ -2,7 +2,11 @@
 
 /**
  * initialiize_arguments - Initilaizes the properties of arg_t arguments
-*/
+ */
+/**
+ * initialize_arguments - a Function that ...
+ * Return: Description of the return value.
+ */
 void initialize_arguments(void)
 {
 	arguments = malloc(sizeof(arg_t));
@@ -22,3 +26,4 @@ void initialize_arguments(void)
 	arguments->stack_length = 0;
 	arguments->stack = 1;
 }
+

@@ -21,8 +21,6 @@ void free_tokens(void)
 	arguments->tokens = NULL;
 }
 
-
-
 /**
  * close_stream - Close the stream when needed
  * Return: void
@@ -35,8 +33,6 @@ void close_stream(void)
 	fclose(arguments->stream);
 	arguments->stream = NULL;
 }
-
-
 
 /**
  * free_stack - frees stack and all other head->next
@@ -85,6 +81,7 @@ void free_arguments(void)
 		free(arguments->line);
 		arguments->line = NULL;
 	}
-	
+
 	free(arguments);
 }
+
