@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /**
- * open_and_read_file - This opens a file and also read the content of the file
+ * stream_file - This opens a file and also read the content of the file
  * @file_path: the name of the file
 */
 void stream_file(char *file_path)
@@ -21,10 +21,10 @@ void stream_file(char *file_path)
 	arguments->stream = fopen(file_path, "r");
 
 	if (arguments->stream == NULL)
-	{	
+	{
 		fclose(arguments->stream);
 		file_error();
 	}
-	
+
 	close(fd);
 }

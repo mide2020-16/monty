@@ -6,6 +6,7 @@
 void invalid_instruction(void)
 {
 	char *opcode = arguments->instruction->opcode;
+	
 	fprintf(stderr, "L%d: unknown instruction %s\n", arguments->ln, opcode);
 	free_all_args();
 	exit(EXIT_FAILURE);
@@ -44,7 +45,7 @@ void get_instruction(void)
 			i++;
 		}
 	}
-	
+
 	invalid_instruction();
 }
 

@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /**
- * initialiize_arguments - Initilaizes the properties of arg_t arguments
+ * initialize_arguments - Initilaizes the properties of arg_t arguments
 */
 void initialize_arguments(void)
 {
