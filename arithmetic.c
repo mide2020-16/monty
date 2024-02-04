@@ -3,7 +3,7 @@
 /**
  * add - Adds the value of two nodes together
  *
- * @stack: The stack
+ * @stack:       The stack
  * @line_number: The line number of the instruction
  */
 void add(stack_t **stack, unsigned int line_number)
@@ -30,7 +30,7 @@ void add(stack_t **stack, unsigned int line_number)
 /**
  * sub - Subtracts the value of two nodes from each other
  *
- * @stack: The stack
+ * @stack:       The stack
  * @line_number: The line number of the instruction
  */
 void sub(stack_t **stack, unsigned int line_number)
@@ -58,7 +58,7 @@ void sub(stack_t **stack, unsigned int line_number)
 /**
  * mul - Multiplies two values together
  *
- * @stack: The stack
+ * @stack:       The stack
  * @line_number: The line number of the instruction
  */
 void mul(stack_t **stack, unsigned int line_number)
@@ -86,14 +86,8 @@ void mul(stack_t **stack, unsigned int line_number)
 /**
  * _div - Divides the value of two nodes from each other
  *
- * @stack: The stack
+ * @stack:       The stack
  * @line_number: The line number of the instruction
- */
-/**
- * _div - a Function that ...
- * @stack: Description of stack.
- * @line_number: Description of line_number.
- * Return: Description of the return value.
  */
 void _div(stack_t **stack, unsigned int line_number)
 {
@@ -126,7 +120,7 @@ void _div(stack_t **stack, unsigned int line_number)
 /**
  * mod - Finds the mod of two values
  *
- * @stack: The stack
+ * @stack:       The stack
  * @line_number: The line number of the instruction
  */
 void mod(stack_t **stack, unsigned int line_number)
@@ -156,4 +150,3 @@ void mod(stack_t **stack, unsigned int line_number)
 	delete_node();
 	arguments->stack_length -= 1;
 }
-
