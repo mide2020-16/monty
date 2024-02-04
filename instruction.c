@@ -43,7 +43,8 @@ void get_instruction(void)
 
 	if (arguments->instruction != NULL && arguments->instruction->opcode != NULL)
 	{
-		while (instructions[i].opcode != NULL){
+		while (instructions[i].opcode != NULL)
+		{
 			if (strcmp(instructions[i].opcode, arguments->tokens[0]) == 0)
 			{
 				arguments->instruction->opcode = instructions[i].opcode;
@@ -54,7 +55,7 @@ void get_instruction(void)
 			i++;
 		}
 	}
-	
+
 	invalid_instruction();
 }
 
