@@ -85,5 +85,6 @@ void free_arguments(void)
 		free(arguments->line);
 		arguments->line = NULL;
 	}
+	
 	free(arguments);
 }
