@@ -1,6 +1,5 @@
 #include "monty.h"
 
-arg_t *arguments = NULL;
 
 /**
  * main - Entry point to monty
@@ -14,10 +13,9 @@ int main(int argc, char *argv[])
 	char line[MAX_LINE_LENGTH];
 	ssize_t len = 0;
 
-	arguments->file_name = argv[1];
-	check_terminal_args(argc);
-
 	initialize_arguments();
+	check_terminal_args(argc);
+	arguments->file_name = argv[1];
 	stream_file(arguments->file_name);
 
 	while (fgets(line, MAX_LINE_LENGTH, arguments->stream) != NULL)

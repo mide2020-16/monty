@@ -8,6 +8,7 @@ void delete_node(void)
 	stack_t *temp;
 
 	temp = arguments->head;
+
 	arguments->head = temp->next;
 	free(temp);
 }

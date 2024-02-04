@@ -25,4 +25,6 @@ void stream_file(char *file_path)
 		fclose(arguments->stream);
 		file_error();
 	}
+	
+	close(fd);
 }

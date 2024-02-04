@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /**
- * add - Adds the valu of two nodes together
+ * add - Adds the value of two nodes together
  *
  * @stack:       The stack
  * @line_number: The line number of the instruction
@@ -145,7 +145,7 @@ void mod(stack_t **stack, unsigned int line_number)
 		free_all_args();
 		exit(EXIT_FAILURE);
 	}
-	node2->n = node1->n % node1->n;
+	node2->n = node2->n % node1->n;
 
 	delete_node();
 	arguments->stack_length -= 1;

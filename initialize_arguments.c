@@ -5,7 +5,8 @@
 */
 void initialize_arguments(void)
 {
-
+	arg_t *arguments;
+	
 	arguments = malloc(sizeof(arg_t));
 	if (arguments == NULL)
 		malloc_error();
@@ -14,6 +15,7 @@ void initialize_arguments(void)
 	if (arguments->instruction == NULL)
 		malloc_error();
 
+	arguments = NULL;
 	arguments->head = NULL;
 	arguments->stream = NULL;
 	arguments->file_name = NULL;
