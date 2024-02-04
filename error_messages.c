@@ -1,9 +1,8 @@
 #include "monty.h"
 
 /**
- * check_terrmainal_args - Error message for the input to the program
+ * check_terminal_args - Error message for the input to the program
  * @argc: The arguments count
- * @message: Message to pass across
  * Return: void
  */
 /**
@@ -18,7 +17,6 @@ void check_terminal_args(int argc)
 		fprintf(stderr, "USAGE: monty file\n");
 		exit(EXIT_FAILURE);
 	}
-	return;
 }
 
 /**
@@ -32,7 +30,7 @@ void malloc_error(void)
 }
 
 /**
- * file-error - Error when file fails to load
+ * file_error - Error when file fails to load
  */
 /**
  * file_error - a Function that ...

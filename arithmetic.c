@@ -84,7 +84,7 @@ void mul(stack_t **stack, unsigned int line_number)
 }
 
 /**
- * div - Divides the value of two nodes from each other
+ * _div - Divides the value of two nodes from each other
  *
  * @stack: The stack
  * @line_number: The line number of the instruction
