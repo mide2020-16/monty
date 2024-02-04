@@ -12,10 +12,15 @@ Clone the repository to your local machine:
 
 ```bash
 git clone https://github.com/mide2020-16/monty.git
+```
 
+```bash
 gcc -Wall -Werror -Wextra -pedantic -std=c89 *.c -o monty
+```
 
-./monty <file>
+## Run
+
+`./monty <file>`
 
 ## Usage
 
@@ -23,6 +28,7 @@ Run the Monty interpreter by providing a Monty ByteCode file:
 
 ```bash
 ./monty example.m
+```
 
 ## Contributing
 
@@ -36,14 +42,9 @@ We welcome contributions! If you'd like to contribute to the project, follow the
 
 ## Authors
 
-- Efuwape Ayomide Oreoluwa (westfire)
-- Atueyi Jennifer (jey)
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+- Efuwape Ayomide Oreoluwa [(westfire)](https://www.github.com/mide2020-16)
+- Atueyi Jennifer [(jey)](https://www.github.com/)
 
 ## Acknowledgments
 
 Special thanks to the #ALX - doing hard things community for their support and encouragement.
-
