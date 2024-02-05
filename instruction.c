@@ -40,6 +40,11 @@ void get_instruction(void)
 		arguments->instruction->opcode = "nop";
 		arguments->instruction->f = nop;
 	}
+	else
+   	{
+		arguments->instruction->opcode = arguments->tokens[0];
+		arguments->instruction->f = NULL;
+    	}
 
 	if (arguments->instruction != NULL && arguments->instruction->opcode != NULL)
 	{
