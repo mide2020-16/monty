@@ -1,5 +1,5 @@
-#ifndef MONTY_H
-#define MONTY_H
+#ifndef _MONTY_H_
+#define _MONTY_H_
 
 /**
  * Standard Libraries for MONTY
@@ -18,7 +18,7 @@
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
  *
- * @n:    Integer
+ * @n: Integer
  * @prev: Points to the previous element of the stack (or queue)
  * @next: Points to the next element of the stack (or queue)
  *
@@ -38,7 +38,7 @@ typedef struct stack_s
  * struct instruction_s - opcode and its function
  *
  * @opcode: The opcode
- * @f:      Function to handle the opcode
+ * @f: Function to handle the opcode
  *
  *
  * Description: opcode and its function
@@ -201,4 +201,4 @@ void rotr(stack_t **stack, unsigned int line_number);
 void stack(stack_t **stack, unsigned int line_number);
 void queue(stack_t **stack, unsigned int line_number);
 
-#endif /*MONTY_H*/
+#endif /*_MONTY_H_*/
