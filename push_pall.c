@@ -3,7 +3,7 @@
 /**
  * push - This operation is used to insert a value to a stack
  *
- * @stack:       The instance of the stack
+ * @stack: The instance of the stack
  * @line_number: The line of the operation in the file
  */
 void push(stack_t **stack, unsigned int line_number)
@@ -50,7 +50,7 @@ void push(stack_t **stack, unsigned int line_number)
 /**
  * pall - This operation prints all the values in the stack
  *
- * @stack:       The instance of the stack
+ * @stack: The instance of the stack
  * @line_number: The line of the operation in the file
  */
 void pall(stack_t **stack, unsigned int line_number)

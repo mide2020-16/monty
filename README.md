@@ -43,7 +43,7 @@ We welcome contributions! If you'd like to contribute to the project, follow the
 ## Authors
 
 - Efuwape Ayomide Oreoluwa [(westfire)](https://www.github.com/mide2020-16)
-- Atueyi Jennifer [(jey)](https://www.github.com/)
+- Atueyi Jennifer [(Jey)](https://www.github.com/jeyrio)
 
 ## Acknowledgments
 
